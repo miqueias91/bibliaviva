@@ -1,0 +1,68 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8743095888",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROID_SUPPORT_VERSION": "28.+",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+    }
+  },
+  "dependent_plugins": {}
+}
