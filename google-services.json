@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "421284002925",
-    "firebase_url": "https://biblia-sagrada-acf-7355a-default-rtdb.firebaseio.com",
-    "project_id": "biblia-sagrada-acf-7355a",
-    "storage_bucket": "biblia-sagrada-acf-7355a.appspot.com"
+    "project_number": "1039797489156",
+    "firebase_url": "https://biblia-sagrada-viva-default-rtdb.firebaseio.com",
+    "project_id": "biblia-sagrada-viva",
+    "storage_bucket": "biblia-sagrada-viva.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:421284002925:android:04c9cb6ac66a818fc75364",
+        "mobilesdk_app_id": "1:1039797489156:android:d4295d9a604046e2bcef51",
         "android_client_info": {
-          "package_name": "br.com.innovatesoft.bibliaacf"
+          "package_name": "br.com.innovatesoft.bibliaviva"
         }
       },
       "oauth_client": [
         {
-          "client_id": "421284002925-sjklajoujalgdp7cipu0sksjhh9udbol.apps.googleusercontent.com",
+          "client_id": "1039797489156-itifii1nf1uc4c6efren9e8lrq6lqdb2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5FMQgva7ytDZqfK6ZCaHygEpu4HzHmXc"
+          "current_key": "AIzaSyDi4BKpgoPRJ8L_xs7_kuv2FbJu2qjf9lY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "421284002925-sjklajoujalgdp7cipu0sksjhh9udbol.apps.googleusercontent.com",
+              "client_id": "1039797489156-itifii1nf1uc4c6efren9e8lrq6lqdb2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
         }
       },
-      "admob_app_id": "ca-app-pub-7091486462236476~8743095888"
+      "admob_app_id": "ca-app-pub-7091486462236476~4799372634"
     }
   ],
   "configuration_version": "1"

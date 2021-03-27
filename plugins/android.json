@@ -9,59 +9,59 @@
   "installed_plugins": {
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-clipboard": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-admob-free": {
-      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8743095888",
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~4799372634",
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-console": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-insomnia": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-plugin-x-socialsharing": {
       "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-promise-polyfill": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova-support-google-services": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "cordova.plugins.diagnostic": {
       "ANDROID_SUPPORT_VERSION": "28.+",
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "phonegap-plugin-multidex": {
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     },
     "phonegap-plugin-push": {
       "FCM_VERSION": "11.6.2",
-      "PACKAGE_NAME": "br.com.innovatesoft.bibliaacf"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaviva"
     }
   },
   "dependent_plugins": {}

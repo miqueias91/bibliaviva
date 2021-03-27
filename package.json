@@ -1,10 +1,10 @@
 {
-  "name": "br.com.innovatesoft.bibliaacf",
+  "name": "br.com.innovatesoft.bibliaviva",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "displayName": "Bíblia Sagrada ACF",
+  "displayName": "Bíblia Sagrada Viva",
   "dependencies": {
     "cordova-admob-sdk": "^0.24.1",
     "cordova-clipboard": "^1.3.0",
@@ -42,7 +42,7 @@
         "PLAY_SERVICES_VERSION": "11.0.4"
       },
       "cordova-plugin-admob-free": {
-        "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8743095888"
+        "ADMOB_APP_ID": "ca-app-pub-7091486462236476~4799372634"
       },
       "cordova-plugin-insomnia": {},
       "cordova-plugin-x-socialsharing": {}

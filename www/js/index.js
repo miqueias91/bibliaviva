@@ -1,8 +1,8 @@
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {
   admobid = {
-    banner: 'ca-app-pub-7091486462236476/2177687536',
-    interstitial: 'ca-app-pub-7091486462236476/7737135972',
+    banner: 'ca-app-pub-7091486462236476/5967509294',
+    interstitial: 'ca-app-pub-7091486462236476/9668555937',
   }
 }
 window.fn = {};
@@ -28,7 +28,7 @@ if (!window.localStorage.getItem('lista-versiculos')) {
 }
 
 if (!window.localStorage.getItem('versao-biblia')) {
-  localStorage.setItem("versao-biblia", 'acf'); 
+  localStorage.setItem("versao-biblia", 'viva'); 
 }
 var versaoId = window.localStorage.getItem('versao-biblia');
 
@@ -123,7 +123,7 @@ var app = {
   },
   oneSignal: function() {
     window.plugins.OneSignal
-    .startInit("b47da7c7-e88e-4e68-ab64-1e6300b3eb7c")   
+    .startInit("541c60bb-5dd3-474f-8b6c-7bf193f621f0")   
     .handleNotificationOpened(function(jsonData) {
       var mensagem = JSON.parse(JSON.stringify(jsonData['notification']['payload']['additionalData']['mensagem']));
       var titulo = JSON.parse(JSON.stringify(jsonData['notification']['payload']['additionalData']['titulo']));
@@ -202,7 +202,7 @@ var app = {
     modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
 
     $("#textoLivro").html('');
-    var versaoId = versaoId || "acf";
+    var versaoId = versaoId || "viva";
     var selector = this;
     var texts = [];
 
@@ -416,7 +416,7 @@ var app = {
   },
   buscaVersiculo: function(versaoId,livro_capitulo_versiculo, id) {
     $("#textoLivro").html('');
-    var versaoId = versaoId || "acf";
+    var versaoId = versaoId || "viva";
     var selector = this;
     var texts = [];
     var dados0 = livro_capitulo_versiculo.split('||');
@@ -508,7 +508,7 @@ var app = {
         $("#"+id).html(texto);
       }
     };
-    xmlhttp.open("GET", "js/acf.json", true);
+    xmlhttp.open("GET", "js/viva.json", true);
     xmlhttp.send();
   },
   buscaHinario: function(id) {
@@ -619,7 +619,7 @@ var app = {
     }
   },
   pesquisaBiblia: function(term){
-    var versaoId = versaoId || "acf";
+    var versaoId = versaoId || "viva";
 
     if (term != '') {
       term = term.toLowerCase();
@@ -721,7 +721,7 @@ var app = {
           'uid': uid,
           'datacadastro': this.dateTime(),
           'ultimoacesso': this.dateTime(),
-          'app': 'acf_v2',
+          'app': 'viva_v2',
         },
         error: function(e) {
         },
@@ -985,14 +985,14 @@ var app = {
   },
   firebase: function(){
     var firebaseConfig = {
-      apiKey: "AIzaSyCOU6ZJrGaw-TM8r7dQ6Lesb8vtL_5KQEI",
-      authDomain: "biblia-sagrada-acf-7355a.firebaseapp.com",
-      databaseURL: "https://biblia-sagrada-acf-7355a-default-rtdb.firebaseio.com",
-      projectId: "biblia-sagrada-acf-7355a",
-      storageBucket: "biblia-sagrada-acf-7355a.appspot.com",
-      messagingSenderId: "421284002925",
-      appId: "1:421284002925:web:713cf96add893f37c75364",
-      measurementId: "G-BB8X39D6P6"
+      apiKey: "AIzaSyD2vTa8malnzRJij-1JL7YNNHGapZTtrvI",
+      authDomain: "biblia-sagrada-viva.firebaseapp.com",
+      databaseURL: "https://biblia-sagrada-viva-default-rtdb.firebaseio.com",
+      projectId: "biblia-sagrada-viva",
+      storageBucket: "biblia-sagrada-viva.appspot.com",
+      messagingSenderId: "1039797489156",
+      appId: "1:1039797489156:web:2210ac377b11b014bcef51",
+      measurementId: "G-ZE5JQ900WT"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
