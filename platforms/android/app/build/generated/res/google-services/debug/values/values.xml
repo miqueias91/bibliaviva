@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1039797489156-itifii1nf1uc4c6efren9e8lrq6lqdb2.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://biblia-sagrada-viva-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1039797489156</string>
+    <string name="google_api_key" translatable="false">AIzaSyDi4BKpgoPRJ8L_xs7_kuv2FbJu2qjf9lY</string>
+    <string name="google_app_id" translatable="false">1:1039797489156:android:d4295d9a604046e2bcef51</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDi4BKpgoPRJ8L_xs7_kuv2FbJu2qjf9lY</string>
+    <string name="google_storage_bucket" translatable="false">biblia-sagrada-viva.appspot.com</string>
+</resources>
