@@ -2,14 +2,14 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.innovatesoft.bibliaviva"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10000"
-6    android:versionName="1.0.0" >
+5    android:versionCode="10001"
+6    android:versionName="1.0.1" >
 7
 8    <uses-sdk
 8-->/var/www/app/android/bibliaviva/platforms/android/app/src/main/AndroidManifest.xml:45:5-47
 9        android:minSdkVersion="19"
 9-->/var/www/app/android/bibliaviva/platforms/android/app/src/main/AndroidManifest.xml:45:5-47
-10        android:targetSdkVersion="29" />
+10        android:targetSdkVersion="30" />
 10-->/var/www/app/android/bibliaviva/platforms/android/app/src/main/AndroidManifest.xml:45:15-44
 11
 12    <supports-screens

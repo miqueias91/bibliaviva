@@ -1,4 +1,4 @@
-#Sat Mar 27 21:33:07 BRT 2021
+#Thu Apr 01 19:18:09 BRT 2021
 base.0=/var/www/app/android/bibliaviva/platforms/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
