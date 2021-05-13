@@ -45,7 +45,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.2" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.3" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -76,22 +76,11 @@
         </div>
       </ons-list-item>
 
-      <ons-list-item onclick="fn.pushPage({'id': 'harpa.html', 'title': 'Harpa Cristã'})">
+      <ons-list-item onclick="fn.pushPage({'id': 'hinario.html', 'title': 'Hinário'})">
         <div class="left">
           <i class="fas fa-music"></i>
         </div>
-          Harpa Cristã
-        </div>
-        <div class="right">
-          <ons-icon icon="fa-link"></ons-icon>
-        </div>
-      </ons-list-item>
-
-      <ons-list-item onclick="fn.pushPage({'id': 'cantor.html', 'title': 'Cantor Cristão'})">
-        <div class="left">
-          <i class="fas fa-music"></i>
-        </div>
-          Cantor Cristão
+          Hinários
         </div>
         <div class="right">
           <ons-icon icon="fa-link"></ons-icon>
@@ -182,7 +171,7 @@
         </div>
       </ons-list-item>
       
-      <ons-list-item onclick="fn.loadLink('https://www.instagram.com/innovatesoft/')">
+      <ons-list-item onclick="fn.loadLink('https://www.instagram.com/cristao.narede/')">
         <div class="left">
             <i class="fab fa-instagram"></i>
         </div>
@@ -286,7 +275,7 @@
       ons.getScriptPage().onInit = function () {
         app.registraAcesso('viva/versiculosMarcados.html');
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         $("#textoVersiculo").html('');
         this.querySelector('#versiculosMarcados_ div.center').textContent = 'Versículos Marcados';
@@ -399,7 +388,7 @@
           };
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('viva/ajustes.html');
           modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
@@ -585,7 +574,7 @@
     </div>
     <script>
       ons.getScriptPage().onInit = function () {
-        app.registraAcesso('aa/faleConosco.html');
+        app.registraAcesso('viva/faleConosco.html');
         var token_ = window.localStorage.getItem("playerID") ? window.localStorage.getItem("playerID") : '';
         $("#token").val(token_);
 
@@ -714,7 +703,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.interstitial.show();
+          //admob.interstitial.show();
         }
         app.registraAcesso('viva/palavraDia.html');
         $("#textoVersiculo").html('');
@@ -850,7 +839,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('viva/capitulosLidos.html');
           $("#textoCapitulosLidos").html('');
@@ -1208,7 +1197,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('viva/harpa.html');
           fn.showDialog('modal-aguarde');
@@ -1680,7 +1669,7 @@
         <script>
           ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
             var dados = this.data.title.split('||'); 
             this.querySelector('#conteudoLivro_ div.center').textContent = dados[1];
@@ -2007,18 +1996,33 @@
                 <ons-back-button>Conteúdo da Harpa</ons-back-button>
             </div>
             <div class="center"></div>
+            <div class="right" id="favoritar_harpa" style="color: #f5f5f5;margin-right: 16px;"><i class="fas fa-star"></i></div>
         </ons-toolbar>
         <div id='conteudoHarpa'></div>
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            ////admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('viva/conteudoHarpa.html?livro='+dados[0]);
           this.querySelector('#conteudoHarpa_ div.center').textContent = dados[0]+' - '+dados[1];
           $("#conteudoHarpa").html('');
           app.buscaHinario(dados[0]);
+
+          var cor_favorito = app.buscaFavorioHinario('harpa', dados[0]);
+          $("#favoritar_harpa").css('color',cor_favorito);
+          $( "#favoritar_harpa" ).click(function() {
+            var cor_favorito = app.buscaFavorioHinario('harpa', dados[0]);
+            if(cor_favorito == '#f5f5f5'){
+              app.incluirFavorioHinario('harpa', dados[0], dados[1]);
+              $(this).css('color','yellow');
+            }
+            else{
+              app.retirarFavorioHinario('harpa', dados[0]);
+              $(this).css('color','#f5f5f5');
+            }
+          });
         }
         </script>
         <style>
@@ -2044,7 +2048,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         app.registraAcesso('viva/notificacoes.html');
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
@@ -2341,7 +2345,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         app.registraAcesso('viva/versoes.html');
         this.querySelector('#versoes_ div.center').textContent = 'Versões';
@@ -2704,7 +2708,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('viva/cantor.html');
           fn.showDialog('modal-aguarde');
@@ -2765,18 +2769,34 @@
                 <ons-back-button>Conteúdo Cantor</ons-back-button>
             </div>
             <div class="center"></div>
+            <div class="right" id="favoritar_cantor" style="color: #f5f5f5;margin-right: 16px;"><i class="fas fa-star"></i></div>
+
         </ons-toolbar>
         <div id='conteudoCantor'></div>
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            ////admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('viva/conteudoCantor.html?livro='+dados[0]);
           this.querySelector('#conteudoCantor_ div.center').textContent = dados[0]+' - '+dados[1];
           $("#conteudoCantor").html('');
           app.buscaCantor(dados[0]);
+
+          var cor_favorito = app.buscaFavorioHinario('cantor', dados[0]);
+          $("#favoritar_cantor").css('color',cor_favorito);
+          $( "#favoritar_cantor" ).click(function() {
+            var cor_favorito = app.buscaFavorioHinario('cantor', dados[0]);
+            if(cor_favorito == '#f5f5f5'){
+              app.incluirFavorioHinario('cantor', dados[0], dados[1]);
+              $(this).css('color','yellow');
+            }
+            else{
+              app.retirarFavorioHinario('cantor', dados[0]);
+              $(this).css('color','#f5f5f5');
+            }
+          });
         }
         </script>
         <style>
@@ -2785,6 +2805,107 @@
           }
         </style>
     </ons-page>
+</template>
+
+<template id="hinario.html">
+  <ons-page>
+    <ons-toolbar id="hinario_">
+      <div class="left">
+          <ons-back-button>Hinário</ons-back-button>
+      </div>
+      <div class="right"></div>
+    </ons-toolbar>
+
+      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'harpa.html', 'title': 'Harpa Cristã'})">
+          <div class="title" style="color: #F5F5F5;">Harpa Cristã</div>
+      </ons-card>
+
+      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'cantor.html', 'title': 'Cantor Cristão'})">
+          <div class="title" style="color: #F5F5F5;">Cantor Cristão</div>
+      </ons-card>
+
+      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'listaFavoritosHinario.html', 'title': 'Favoritos'})">
+          <div class="title" style="color: #F5F5F5;">Favoritos</div>
+      </ons-card>
+
+    <script>
+        ons.getScriptPage().onInit = function () {
+          app.registraAcesso('viva/hinario.html');
+          this.querySelector('#hinario_ div.center').textContent = 'Hinários';
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="listaFavoritosHinario.html">
+  <ons-page>
+    <ons-toolbar id="listaFavoritosHinario_">
+        <div class="left">
+            <ons-back-button>Favoritos</ons-back-button>
+        </div>
+        <div class="center"></div>
+    </ons-toolbar>
+
+    <ons-list id="listaFavoritos"></ons-list>
+
+    <script>
+        ons.getScriptPage().onInit = function () {
+          if (window.localStorage.getItem("versao_pro") === 'NAO') {
+            ////admob.interstitial.show();
+          }
+          app.registraAcesso('abs/listaFavoritosHinario.html');
+          fn.showDialog('modal-aguarde');
+          app.listaFavorioHinario();
+          var timeoutID = 0;
+          clearTimeout(timeoutID);
+          timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 5);
+          this.querySelector('#listaFavoritosHinario_ div.center').textContent = 'Favoritos';
+
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
 </template>
 
 <script src="js/index.js"></script>
