@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.innovatesoft.bibliaviva"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10002"
-6    android:versionName="1.0.2" >
+5    android:versionCode="10003"
+6    android:versionName="1.0.3" >
 7
 8    <uses-sdk
 8-->/var/www/app/android/bibliaviva/platforms/android/app/src/main/AndroidManifest.xml:45:5-47
