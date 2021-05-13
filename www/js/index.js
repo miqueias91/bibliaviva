@@ -926,6 +926,54 @@ var app = {
       });
     }
   },
+  registraContato: function(assunto, email, celular, mensagem) {
+    var playerID = window.localStorage.getItem('playerID');
+    if (playerID != "") {
+      fn.showDialog('modal-aguarde');
+      $.ajax({
+        url: "https://www.innovatesoft.com.br/registra-mensagem.php",
+        dataType: 'json',
+        type: 'POST',
+        data: {
+          'assunto': assunto,
+          'email': email,
+          'celular': celular,
+          'mensagem': mensagem,
+          'userId': playerID,
+        },
+        error: function(e) {
+          var timeoutID = 0;
+          clearTimeout(timeoutID);
+          timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
+          ons.notification.alert(
+            'Verifique sua conexão com a internet!',
+            {title: 'Erro'}
+          );
+        },
+        success: function(a) {
+          var timeoutID = 0;
+          clearTimeout(timeoutID);
+          timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
+          ons.notification.alert(
+            'Mensagem enviada com sucesso!',
+            {title: 'Sucesso'}
+          );
+        },
+      });
+    }
+    else{
+      ons.notification.alert(
+        'Tente novamente mais tarde!',
+        {title: 'Erro'}
+      );
+    }
+  },
+  validacaoEmail: function(field) {
+    if (field.search("@") >= 0) {
+      return true;
+    }
+    return false;
+  },
   buscaDadosUsuario: function() {
     var uid = window.localStorage.getItem('uid');
     var playerID = window.localStorage.getItem('playerID');

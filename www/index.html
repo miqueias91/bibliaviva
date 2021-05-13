@@ -45,7 +45,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.1" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.2" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -170,7 +170,7 @@
         </div>
       </ons-list-item>
 
-      <ons-list-item onclick="fn.loadLink('https://www.innovatesoft.com.br/contato.php')">
+      <ons-list-item onclick="fn.pushPage({'id': 'faleConosco.html', 'title': 'Fale Conosco'})">
         <div class="left">
           <i class="fas fa-comment"></i>
         </div>
@@ -178,22 +178,10 @@
           Fale Conosco
         </div>
         <div class="right">
-          <ons-icon icon="fa-external-link"></ons-icon>
+          <ons-icon icon="fa-link"></ons-icon>
         </div>
       </ons-list-item>
-
-      <ons-list-item onclick="fn.loadLink('https://cristaonarede.com.br/loja')">
-        <div class="left">
-          <i class="fas fa-store"></i>
-        </div>
-        <div class="center">
-          Livraria
-        </div>
-        <div class="right">
-          <ons-icon icon="fa-external-link"></ons-icon>
-        </div>
-      </ons-list-item>
-
+      
       <ons-list-item onclick="fn.loadLink('https://www.instagram.com/innovatesoft/')">
         <div class="left">
             <i class="fab fa-instagram"></i>
@@ -537,6 +525,118 @@
               app.verificaExistenciaUsuario(usuario, religiao, nome, email, celular);
             }
           });
+      }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="faleConosco.html">
+  <ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>Fale Conosco</ons-back-button>
+        </div>
+        <div class="center"></div>
+    </ons-toolbar>
+    <div style="text-align: center; margin-top: 30px;">
+      <p class="intro">Para receber mais informações, tirar dúvidas ou enviar sugestões, entre em contato conosco através do formulário abaixo. Será um prazer atendê-lo!</p>
+      <br><br>
+      <p><ons-input style="width: 90%;margin-bottom: 20px;" id="token" placeholder="Token:" modifier="underbar" type="text" float disabled></ons-input></p>
+      <p>
+        <ons-select style="width: 90%;margin-bottom: 20px;" id="assunto">
+          <option value="">Assunto</option>
+          <option value="anuncios">Anúncios</option>
+          <option value="informacao">Informação</option>
+          <option value="duvidas">Dúvidas</option>
+          <option value="sugestoes">Sugestões</option>
+          <option value="outro">Outro</option>
+        </ons-select>
+      </p>
+      <p><ons-input style="width: 90%;margin-bottom: 20px;" id="email" placeholder="Seu E-mail: exemplo@exemplo.com" modifier="underbar" type="email" float></ons-input></p>
+      <p><ons-input style="width: 90%;margin-bottom: 20px;" id="celular" placeholder="Seu Celular: 99 9 9999 9999" modifier="underbar" type="number" float></ons-input></p>
+      <p><textarea style="width: 90%;margin-bottom: 20px;" id="mensagem" class="textarea textarea--transparent" placeholder="Mensagem"></textarea></p>
+      <br>
+      <br>
+      <section style="margin: 16px">
+        <ons-button modifier="large" class="button-margin" id="enviarMensagem">Enviar Mensagem</ons-button>
+      </section>
+      <br><br>
+    </div>
+    <script>
+      ons.getScriptPage().onInit = function () {
+        app.registraAcesso('aa/faleConosco.html');
+        var token_ = window.localStorage.getItem("playerID") ? window.localStorage.getItem("playerID") : '';
+        $("#token").val(token_);
+
+        this.querySelector('div.center').textContent = 'Fale Conosco';
+
+        $( "#enviarMensagem" ).click(function() {
+          var assunto = $("#assunto").val();
+          var email = $("#email").val();
+          var celular = $("#celular").val();
+          var mensagem = $("#mensagem").val();
+
+          if (assunto == "") {
+            ons.notification.alert(
+              'Informe o assunto!',
+              {title: 'Erro'}
+            );
+          }
+          else if (email == "") {
+            ons.notification.alert(
+              'Informe seu e-mail!',
+              {title: 'Erro'}
+            );
+          }
+          else if (!app.validacaoEmail(email)) {
+            ons.notification.alert(
+              'Informe um e-mail válido!',
+              {title: 'Erro'}
+            );
+          }
+          else if (celular == "") {
+            ons.notification.alert(
+              'Informe seu n° de celular!',
+              {title: 'Erro'}
+            );
+          }
+          else if (celular.length != 11 ) {
+            ons.notification.alert(
+              'Informe um n° de celular válido com o DDD!',
+              {title: 'Erro'}
+            );
+          }
+          else if (mensagem == "") {
+            ons.notification.alert(
+              'Informe uma mensagem!',
+              {title: 'Erro'}
+            );
+          }
+          else{
+            app.registraContato(assunto, email, celular, mensagem);
+          }
+        });
       }
     </script>
     <style>
