@@ -45,7 +45,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.3" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.4" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -81,6 +81,17 @@
           <i class="fas fa-music"></i>
         </div>
           Hinários
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+
+      <ons-list-item onclick="fn.pushPage({'id': 'quizbiblico.html', 'title': 'Quiz Bíblico'})">
+        <div class="left">
+          <i class="fas fa-play"></i>
+        </div>
+          Quiz Bíblico
         </div>
         <div class="right">
           <ons-icon icon="fa-link"></ons-icon>
@@ -2898,6 +2909,232 @@
       ons-card {
         cursor: pointer;
         color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="quizbiblico.html">
+  <ons-page>
+    <ons-toolbar id="score_">
+      <div class="left">
+        <ons-back-button>Quiz Bíblico</ons-back-button>
+      </div>
+      <div  style="font-size: 20px" class="center"></div>
+    </ons-toolbar>
+    <ons-card style="margin-top:60px;background-color: #333;" onclick="fn.pushPage({'id': 'quiz.html', 'title': 'Quiz Bíblico'})">
+      <div class="title titulo_menu"><i class="fas fa-play"></i><br>Jogar</div>
+    </ons-card>
+
+    <ons-row>
+      <ons-col>
+        <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'score.html', 'title': 'Score'})">
+          <div class="title titulo_menu"><i class="fas fa-tachometer-alt"></i><br>Score</div>
+        </ons-card>
+      </ons-col>
+ 
+      <ons-col>
+        <ons-card style="background-color: #333;" onclick="fn.loadLink('https://play.google.com/store/apps/dev?id=5836491033714204382')">
+          <div class="title titulo_menu"><i class="fab fa-google-play"></i><br>App's</div>
+        </ons-card>
+      </ons-col>
+    </ons-row>
+    <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'help.html', 'title': 'AJUDA'})">
+      <div class="title titulo_menu"><i class="fas fa-question-circle"></i><br>Ajuda</div>
+    </ons-card>
+    <script>
+        ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              admob.interstitial.show();
+            }
+            this.querySelector('#score_ div.center').textContent = 'Quiz Bíblico';
+        }
+    </script>
+    <style>
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #704031;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="score.html">
+  <ons-page>
+        <ons-toolbar id="score_">
+            <div class="left">
+                <ons-back-button>Score</ons-back-button>
+            </div>
+            <div  style="font-size: 20px" class="center"></div>
+        </ons-toolbar>
+        <ons-list-header style="font-size: 30px;">
+            <div class="left">
+            </div>
+            <div class="center intro" id="maxScore" style="font-size: 100px;margin-top: 100px;">
+                Max Score
+            </div>
+        </ons-list-header>
+        
+    <script>
+        ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              admob.interstitial.show();
+            }
+            this.querySelector('#score_ div.center').textContent = 'Max Score';
+            var arr = localStorage.getItem('lista-score');
+            if (!arr) {
+                $("#maxScore").html(0);
+            }
+            else{
+                $("#maxScore").html(maxArray(JSON.parse(arr)));
+                app.cadastraScore();
+            }
+
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #704031;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="help.html">
+  <ons-page>
+        <ons-toolbar id="score_">
+            <div class="left">
+                <ons-back-button>Ajuda</ons-back-button>
+            </div>
+            <div class="center"></div>
+        </ons-toolbar>
+        <ons-list-header>
+            <div class="left">
+            </div>
+            <div class="center intro" style="font-size: 25px">
+                <p>Perguntas Bíblicas</p>
+
+                <p>Quiz de perguntas bíblicas com alternativas para você testar o seu conhecimento e se dedicar ainda mais a Palavra de Deus!</p>
+
+                <p>Nesta seleção de perguntas você encontrará questões gerais sobre a Bíblia, temas do Velho e Novo Testamento.</p>
+
+                <p>Bom desafio!</p>
+            </div>
+        </ons-list-header>
+        
+    <script>
+        ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              admob.interstitial.show();
+            }
+            this.querySelector('#score_ div.center').textContent = 'Ajuda';
+            var arr = localStorage.getItem('lista-score');
+            $("#maxScore").html(maxArray(JSON.parse(arr)));
+
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #704031;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="quiz.html">
+  <ons-page>
+        <ons-toolbar id="quiz_">
+            <div class="left">
+                <ons-back-button>Quiz Bíblico</ons-back-button>
+            </div>
+            <div class="center" style="font-size: 20px!important"></div>
+        </ons-toolbar>
+     
+
+        <ons-list-header style="font-size: 30px;margin-top: 10px;" id="textoquiz_">
+            <div class="center">
+                <span id="acerto"></span>
+                <span style="float: right;" id="erro"></span>
+            </div>
+        </ons-list-header>
+        <br>
+
+        <ons-list id="textoquiz">
+        </ons-list>
+
+    <script>
+        ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              admob.interstitial.show();
+            }
+            var dados = this.data.title.split('||'); 
+            this.querySelector('#quiz_ div.center').textContent = dados[0];
+            $('#acerto').html('Acertos: '+acertos);
+            $('#erro').html('Erros: '+erros);
+            app.carregaQuiz();
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #549A7D;
       }
 
       .card__title,
