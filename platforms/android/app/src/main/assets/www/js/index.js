@@ -474,8 +474,10 @@ var app = {
             var num_versiculo = $('#'+id).attr('num_versiculo');
 
             var lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
-            lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
-            localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
+            if(livro && num_capitulo && num_versiculo){
+              lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
+              localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
+            }
             usar_cores = 0;
           }      
         });
