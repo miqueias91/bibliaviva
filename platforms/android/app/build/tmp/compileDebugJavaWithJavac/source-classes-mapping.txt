@@ -1,0 +1,162 @@
+org/apache/cordova/splashscreen/SplashScreen.java
+ org.apache.cordova.splashscreen.SplashScreen
+ org.apache.cordova.splashscreen.SplashScreen$1
+ org.apache.cordova.splashscreen.SplashScreen$2
+ org.apache.cordova.splashscreen.SplashScreen$3
+ org.apache.cordova.splashscreen.SplashScreen$4
+ org.apache.cordova.splashscreen.SplashScreen$4$1
+ org.apache.cordova.splashscreen.SplashScreen$5
+ org.apache.cordova.splashscreen.SplashScreen$5$1
+ org.apache.cordova.splashscreen.SplashScreen$6
+ org.apache.cordova.splashscreen.SplashScreen$6$1
+ org.apache.cordova.splashscreen.SplashScreen$7
+cordova/plugins/Diagnostic_Location.java
+ cordova.plugins.Diagnostic_Location
+ cordova.plugins.Diagnostic_Location$1
+com/adobe/phonegap/push/PushHandlerActivity.java
+ com.adobe.phonegap.push.PushHandlerActivity
+cordova/plugins/Diagnostic.java
+ cordova.plugins.Diagnostic
+ cordova.plugins.Diagnostic$1
+ cordova.plugins.Diagnostic$2
+cordova/plugins/Diagnostic_Wifi.java
+ cordova.plugins.Diagnostic_Wifi
+name/ratson/cordova/admob/interstitial/InterstitialExecutor.java
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$1
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$2
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$3
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$4
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$5
+com/adobe/phonegap/push/PushInstanceIDListenerService.java
+ com.adobe.phonegap.push.PushInstanceIDListenerService
+nl/xservices/plugins/Insomnia.java
+ nl.xservices.plugins.Insomnia
+ nl.xservices.plugins.Insomnia$1
+ nl.xservices.plugins.Insomnia$2
+org/apache/cordova/dialogs/Notification.java
+ org.apache.cordova.dialogs.Notification
+ org.apache.cordova.dialogs.Notification$1
+ org.apache.cordova.dialogs.Notification$2
+ org.apache.cordova.dialogs.Notification$2$1
+ org.apache.cordova.dialogs.Notification$2$2
+ org.apache.cordova.dialogs.Notification$3
+ org.apache.cordova.dialogs.Notification$3$1
+ org.apache.cordova.dialogs.Notification$3$2
+ org.apache.cordova.dialogs.Notification$3$3
+ org.apache.cordova.dialogs.Notification$3$4
+ org.apache.cordova.dialogs.Notification$4
+ org.apache.cordova.dialogs.Notification$4$1
+ org.apache.cordova.dialogs.Notification$4$2
+ org.apache.cordova.dialogs.Notification$4$3
+ org.apache.cordova.dialogs.Notification$4$4
+ org.apache.cordova.dialogs.Notification$5
+ org.apache.cordova.dialogs.Notification$5$1
+ org.apache.cordova.dialogs.Notification$6
+ org.apache.cordova.dialogs.Notification$6$1
+org/apache/cordova/statusbar/StatusBar.java
+ org.apache.cordova.statusbar.StatusBar
+ org.apache.cordova.statusbar.StatusBar$1
+ org.apache.cordova.statusbar.StatusBar$2
+ org.apache.cordova.statusbar.StatusBar$3
+ org.apache.cordova.statusbar.StatusBar$4
+name/ratson/cordova/admob/AdMobConfig.java
+ name.ratson.cordova.admob.AdMobConfig
+nl/xservices/plugins/FileProvider.java
+ nl.xservices.plugins.FileProvider
+nl/xservices/plugins/ShareChooserPendingIntent.java
+ nl.xservices.plugins.ShareChooserPendingIntent
+nl/xservices/plugins/SocialSharing.java
+ nl.xservices.plugins.SocialSharing
+ nl.xservices.plugins.SocialSharing$1
+ nl.xservices.plugins.SocialSharing$1$1
+ nl.xservices.plugins.SocialSharing$2
+ nl.xservices.plugins.SocialSharing$2$1
+ nl.xservices.plugins.SocialSharing$2$2
+ nl.xservices.plugins.SocialSharing$2$2$1
+ nl.xservices.plugins.SocialSharing$2$3
+ nl.xservices.plugins.SocialSharing$3
+ nl.xservices.plugins.SocialSharing$3$1
+ nl.xservices.plugins.SocialSharing$4
+ nl.xservices.plugins.SocialSharing$SocialSharingRunnable
+com/plugin/gcm/OneSignalPush.java
+ com.plugin.gcm.OneSignalPush
+ com.plugin.gcm.OneSignalPush$1
+ com.plugin.gcm.OneSignalPush$2
+ com.plugin.gcm.OneSignalPush$3
+ com.plugin.gcm.OneSignalPush$4
+ com.plugin.gcm.OneSignalPush$5
+ com.plugin.gcm.OneSignalPush$6
+ com.plugin.gcm.OneSignalPush$7
+ com.plugin.gcm.OneSignalPush$8
+ com.plugin.gcm.OneSignalPush$9
+ com.plugin.gcm.OneSignalPush$CordovaNotificationOpenedHandler
+ com.plugin.gcm.OneSignalPush$CordovaNotificationReceivedHandler
+org/apache/cordova/whitelist/WhitelistPlugin.java
+ org.apache.cordova.whitelist.WhitelistPlugin
+ org.apache.cordova.whitelist.WhitelistPlugin$1
+ org.apache.cordova.whitelist.WhitelistPlugin$CustomConfigXmlParser
+com/adobe/phonegap/push/FCMService.java
+ com.adobe.phonegap.push.FCMService
+name/ratson/cordova/admob/AdMob.java
+ name.ratson.cordova.admob.AdMob
+name/ratson/cordova/admob/banner/BannerExecutor.java
+ name.ratson.cordova.admob.banner.BannerExecutor
+ name.ratson.cordova.admob.banner.BannerExecutor$1
+ name.ratson.cordova.admob.banner.BannerExecutor$2
+ name.ratson.cordova.admob.banner.BannerExecutor$3
+ name.ratson.cordova.admob.banner.BannerExecutor$4
+com/adobe/phonegap/push/PushConstants.java
+ com.adobe.phonegap.push.PushConstants
+name/ratson/cordova/admob/AbstractExecutor.java
+ name.ratson.cordova.admob.AbstractExecutor
+name/ratson/cordova/admob/banner/BannerListener.java
+ name.ratson.cordova.admob.banner.BannerListener
+name/ratson/cordova/admob/Actions.java
+ name.ratson.cordova.admob.Actions
+cordova/plugins/Diagnostic_Bluetooth.java
+ cordova.plugins.Diagnostic_Bluetooth
+ cordova.plugins.Diagnostic_Bluetooth$1
+com/verso/cordova/clipboard/Clipboard.java
+ com.verso.cordova.clipboard.Clipboard
+com/adobe/phonegap/push/PushDismissedHandler.java
+ com.adobe.phonegap.push.PushDismissedHandler
+com/adobe/phonegap/push/BackgroundActionButtonHandler.java
+ com.adobe.phonegap.push.BackgroundActionButtonHandler
+cordova/plugins/Diagnostic_External_Storage.java
+ cordova.plugins.Diagnostic_External_Storage
+name/ratson/cordova/admob/interstitial/InterstitialListener.java
+ name.ratson.cordova.admob.interstitial.InterstitialListener
+br/com/innovatesoft/bibliaviva/MainActivity.java
+ br.com.innovatesoft.bibliaviva.MainActivity
+com/adobe/phonegap/push/PushPlugin.java
+ com.adobe.phonegap.push.PushPlugin
+ com.adobe.phonegap.push.PushPlugin$1
+ com.adobe.phonegap.push.PushPlugin$10
+ com.adobe.phonegap.push.PushPlugin$11
+ com.adobe.phonegap.push.PushPlugin$2
+ com.adobe.phonegap.push.PushPlugin$3
+ com.adobe.phonegap.push.PushPlugin$4
+ com.adobe.phonegap.push.PushPlugin$5
+ com.adobe.phonegap.push.PushPlugin$6
+ com.adobe.phonegap.push.PushPlugin$7
+ com.adobe.phonegap.push.PushPlugin$8
+ com.adobe.phonegap.push.PushPlugin$9
+cordova/plugins/Diagnostic_Notifications.java
+ cordova.plugins.Diagnostic_Notifications
+cordova/plugins/Diagnostic_Camera.java
+ cordova.plugins.Diagnostic_Camera
+br/com/innovatesoft/bibliaviva/BuildConfig.java
+ br.com.innovatesoft.bibliaviva.BuildConfig
+cordova/plugins/Diagnostic_NFC.java
+ cordova.plugins.Diagnostic_NFC
+ cordova.plugins.Diagnostic_NFC$1
+name/ratson/cordova/admob/rewardvideo/RewardVideoListener.java
+ name.ratson.cordova.admob.rewardvideo.RewardVideoListener
+name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
+name/ratson/cordova/admob/CordovaEventBuilder.java
+ name.ratson.cordova.admob.CordovaEventBuilder

@@ -45,7 +45,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.5" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.6" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -194,7 +194,7 @@
         </div>
       </ons-list-item>
 
-      <ons-list-item onclick="fn.loadLink('https://bit.ly/3l9zjYi')">
+      <ons-list-item onclick="fn.loadLink('https://play.google.com/store/apps/dev?id=5836491033714204382')">
         <div class="left">
           <i class="fab fa-google-play"></i>
         </div>
@@ -245,12 +245,23 @@
 </ons-modal>
 
 <template id="home.html">
-  <ons-page>
-    <p class="intro">Foi traduzida inicialmente pelo pastor protestante João Ferreira de Almeida. O Novo Testamento foi impresso inicialmente em 1681 e depois em 1683 pelas Companhias da Batávia. A Bíblia completa só foi impressa em 1750, 1819, e 1860 sucessivamente, depois foi revisada e corrigida pela Sociedade Bíblica Britânica e Estrangeira em Londres no ano de 1898, tendo como base a King James Bible.</p>
+    <section style="margin: 16px" id="tela_login_google">
+      <br><br>
+      <p class="intro"  style="text-align: center;">Bem vindo, faça o login com a sua conta do <b>google</b> para uma melhor experiência no seu aplicativo.</p>
+      <ons-button modifier="large" class="button-margin" id="sair_google" onclick="logarGoogle()">Entrar</ons-button>
+    </section>
 
-    <p class="intro">Embora João Ferreira de Almeida terminasse o Novo Testamento em 1676, este veio a ser impresso em 1681. A impressão foi feita em Amsterdã, na Holanda, na tipografia da viúva J. V. Zomeren. O título era este: “O Novo Testamento Isto he o Novo Concerto de Nosso Fiel Senhor e Redemptor Iesu Christo traduzido na Língua Portuguesa”. Um ano depois, essa edição do Novo Testamento chegou a Batávia, mas apresentava erros de tradução e revisão. O fato foi comunicado às autoridades da Holanda e todos os exemplares que ainda não haviam saído de lá foram destruídos, por ordem da Companhia das Índias Orientais. As autoridades Holandesas determinaram que se fizesse o mesmo com os volumes que já estavam em Batávia. Pediram também que se começasse, o mais rápido possível, uma nova e cuidadosa revisão do texto.</p>
+    <section id="tela_home" style="display:none">
+      <p class="intro">Foi traduzida inicialmente pelo pastor protestante João Ferreira de Almeida. O Novo Testamento foi impresso inicialmente em 1681 e depois em 1683 pelas Companhias da Batávia. A Bíblia completa só foi impressa em 1750, 1819, e 1860 sucessivamente, depois foi revisada e corrigida pela Sociedade Bíblica Britânica e Estrangeira em Londres no ano de 1898, tendo como base a King James Bible.</p>
 
-    <p class="intro">Apesar das ordens recebidas da Holanda, nem todos os exemplares recebidos em Batávia foram destruídos. Alguns deles foram corrigidos à mão e enviados às congregações da região (um desses volumes pode ser visto hoje no Museu Britânico, em Londres). O trabalho de revisão e correção do Novo Testamento foi iniciado e demorou dez longos anos para ser terminado. Somente após a morte de Almeida, em 1693, é que essa segunda versão foi impressa, na própria Batávia, onde também foi distribuída. A terceira edição viria a ser publicada em 1712.</p>
+      <p class="intro">Embora João Ferreira de Almeida terminasse o Novo Testamento em 1676, este veio a ser impresso em 1681. A impressão foi feita em Amsterdã, na Holanda, na tipografia da viúva J. V. Zomeren. O título era este: “O Novo Testamento Isto he o Novo Concerto de Nosso Fiel Senhor e Redemptor Iesu Christo traduzido na Língua Portuguesa”. Um ano depois, essa edição do Novo Testamento chegou a Batávia, mas apresentava erros de tradução e revisão. O fato foi comunicado às autoridades da Holanda e todos os exemplares que ainda não haviam saído de lá foram destruídos, por ordem da Companhia das Índias Orientais. As autoridades Holandesas determinaram que se fizesse o mesmo com os volumes que já estavam em Batávia. Pediram também que se começasse, o mais rápido possível, uma nova e cuidadosa revisão do texto.</p>
+
+      <p class="intro">Apesar das ordens recebidas da Holanda, nem todos os exemplares recebidos em Batávia foram destruídos. Alguns deles foram corrigidos à mão e enviados às congregações da região (um desses volumes pode ser visto hoje no Museu Britânico, em Londres). O trabalho de revisão e correção do Novo Testamento foi iniciado e demorou dez longos anos para ser terminado. Somente após a morte de Almeida, em 1693, é que essa segunda versão foi impressa, na própria Batávia, onde também foi distribuída. A terceira edição viria a ser publicada em 1712.</p>
+    </section>
+
+    <section style="padding: 8px;display: none;" id="btn_remover_anuncio">
+      <ons-button onclick="versaoPro()" modifier="large">ASSINAR VERSÃO PRO</ons-button>
+    </section>
     <style>
       .intro {
         text-align: justify;
@@ -267,6 +278,29 @@
         font-size: 20px;
       }
     </style>
+    <script type="text/javascript">
+      var conta = window.localStorage.getItem('conta');
+      if (conta == 'google') {
+        $("#tela_home").css("display","");
+        $("#tela_login_google").css("display","none");
+      }
+      var logarGoogle = function() {
+        var uid = window.localStorage.getItem('uid');
+        var playerID = window.localStorage.getItem('playerID');
+        var pushToken = window.localStorage.getItem('pushToken');
+        var id_user = window.localStorage.getItem('id_user');
+        var app = 'viva_v2';
+        fn.loadLink('https://www.innovatesoft.com.br/auth?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+      };
+      var versaoPro = function() {
+        var uid = window.localStorage.getItem('uid');
+        var playerID = window.localStorage.getItem('playerID');
+        var pushToken = window.localStorage.getItem('pushToken');
+        var id_user = window.localStorage.getItem('id_user');
+        var app = 'viva_v2';
+        fn.loadLink('https://www.innovatesoft.com.br/pricing?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+      };
+    </script>
   </ons-page>
 </template>
 
@@ -436,6 +470,9 @@
     <div style="text-align: center; margin-top: 30px;">
       <span id="mensagemMinhasInformacoes"><p class="intro">Você está usando a versão FREE.</p></span>
       <br><br>
+      <div class="profile-pic">
+        <img class="avatar" src="img/logo.png">
+      </div>
       <p><ons-input style="width: 90%;margin-bottom: 20px;" id="token" placeholder="Token:" modifier="underbar" type="text" float disabled></ons-input></p>
       <p><ons-input style="width: 90%;margin-bottom: 20px;" id="nome" placeholder="Seu Nome:" modifier="underbar" type="text" float></ons-input></p>
       <p><ons-input style="width: 90%;margin-bottom: 20px;" id="usuario" placeholder="Seu Usuário:" modifier="underbar" float></ons-input></p>
@@ -454,10 +491,22 @@
       <br>
       <section style="margin: 16px">
         <ons-button modifier="large" class="button-margin" id="salvar_minhas_informacoes">Ok</ons-button>
+        <ons-button style="display: none;" modifier="large" class="button-margin" id="btn_entrar_google">Cadastrar com o Google</ons-button>
+        <ons-button style="display: none;" modifier="large" class="button-margin" id="btn_sair_google">Sair do Google</ons-button>
       </section>
       <br><br>
     </div>
     <script>
+      var conta = window.localStorage.getItem('conta');
+      if (conta == 'google') {
+        $("#btn_entrar_google").css('display','none');
+        $("#btn_sair_google").css('display','');
+      }
+      else{
+        $("#btn_entrar_google").css('display','');
+        $("#btn_sair_google").css('display','none');
+      }
+
       ons.getScriptPage().onInit = function () {
         var token_ = window.localStorage.getItem("playerID") ? window.localStorage.getItem("playerID") : '';
         var nome_ = window.localStorage.getItem("nome") ? window.localStorage.getItem("nome") : '';
@@ -465,13 +514,14 @@
         var email_ = window.localStorage.getItem("email") ? window.localStorage.getItem("email") : '';
         var celular_ = window.localStorage.getItem("celular") ? window.localStorage.getItem("celular") : '';
         var religiao_ = window.localStorage.getItem("religiao") ? window.localStorage.getItem("religiao") : '';
+
         
         $("#token").val(token_);
         $("#nome").val(nome_);
         $("#usuario").val(usuario_);
         $("#email").val(email_);
         $("#celular").val(celular_);
-        $("#religiao").val(religiao_);
+        $("#religiao").val(religiao_);  
 
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
           $("#mensagemMinhasInformacoes").html('<p class="intro">Você está usando a versão FREE.</p>');
@@ -484,53 +534,79 @@
         app.registraAcesso('viva/minhaConfiguracao.html');
         this.querySelector('#minhasInformacoes_ div.center').textContent = 'Minha Configuração';
 
-          $( "#salvar_minhas_informacoes" ).click(function() {
-            var nome = $("#nome").val();
-            var usuario = $("#usuario").val();
-            var email = $("#email").val();
-            var celular = $("#celular").val();
-            var religiao = $("#religiao").val();
+        $( "#salvar_minhas_informacoes" ).click(function() {
+          var nome = $("#nome").val();
+          var usuario = $("#usuario").val();
+          var email = $("#email").val();
+          var celular = $("#celular").val();
+          var religiao = $("#religiao").val();
 
-            if (nome == "") {
-              ons.notification.alert(
-                'Informe o seu nome!',
-                {title: 'Erro'}
-              );
-            }
-            else if (usuario == "") {
-              ons.notification.alert(
-                'Informe um usuário!',
-                {title: 'Erro'}
-              );
-            }
-            else if (email == "") {
-              ons.notification.alert(
-                'Informe seu e-mail!',
-                {title: 'Erro'}
-              );
-            }
-            else if (celular == "") {
-              ons.notification.alert(
-                'Informe seu n° de celular!',
-                {title: 'Erro'}
-              );
-            }
-            else if (religiao == "") {
-              ons.notification.alert(
-                'Informe sua religião!',
-                {title: 'Erro'}
-              );
-            }
-            else{
-              app.verificaExistenciaUsuario(usuario, religiao, nome, email, celular);
-            }
-          });
+          if (nome == "") {
+            ons.notification.alert(
+              'Informe o seu nome!',
+              {title: 'Erro'}
+            );
+          }
+          else if (usuario == "") {
+            ons.notification.alert(
+              'Informe um usuário!',
+              {title: 'Erro'}
+            );
+          }
+          else if (email == "") {
+            ons.notification.alert(
+              'Informe seu e-mail!',
+              {title: 'Erro'}
+            );
+          }
+          else if (celular == "") {
+            ons.notification.alert(
+              'Informe seu n° de celular!',
+              {title: 'Erro'}
+            );
+          }
+          else if (religiao == "") {
+            ons.notification.alert(
+              'Informe sua religião!',
+              {title: 'Erro'}
+            );
+          }
+          else{
+            app.verificaExistenciaUsuario(usuario, religiao, nome, email, celular);
+          }
+        });
+
+        $( "#btn_entrar_google" ).click(function() {
+          var uid = window.localStorage.getItem('uid');
+          var playerID = window.localStorage.getItem('playerID');
+          var pushToken = window.localStorage.getItem('pushToken');
+          var id_user = window.localStorage.getItem('id_user');
+          var app = 'viva_v2';
+          fn.loadLink('https://www.innovatesoft.com.br/auth?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+        });
+
+        $( "#btn_sair_google" ).click(function() {
+          window.localStorage.setItem('conta','');
+          window.localStorage.setItem('nome','');
+          window.localStorage.setItem('email','');
+
+          var uid = window.localStorage.getItem('uid');
+          var playerID = window.localStorage.getItem('playerID');
+          var pushToken = window.localStorage.getItem('pushToken');
+          var id_user = window.localStorage.getItem('id_user');
+          var app = 'viva_v2';
+          fn.loadLink('https://www.innovatesoft.com.br/logon?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+          $("#nome").val('');
+          $("#email").val('');
+          $("#btn_entrar_google").css('display','');
+          $("#btn_sair_google").css('display','none');
+        });
       }
     </script>
     <style>
-        .button-margin {
-            margin: 6px 0;
-        }
+      .button-margin {
+        margin: 6px 0;
+      }
 
       .intro {
         text-align: center;
@@ -546,6 +622,15 @@
       .card__title,
       .card--material__title {
         font-size: 20px;
+      }
+      .profile-pic {
+        background-color: transparent;
+      }
+      .profile-pic > img {
+        width: 50px!important;
+        background-color: transparent;
+        margin: 0 auto;
+        padding: 0!important;
       }
     </style>
   </ons-page>
@@ -2885,7 +2970,7 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('abs/listaFavoritosHinario.html');
+          app.registraAcesso('viva/listaFavoritosHinario.html');
           fn.showDialog('modal-aguarde');
           app.listaFavorioHinario();
           var timeoutID = 0;

@@ -1,10 +1,7 @@
-#Wed Jun 02 20:07:34 BRT 2021
-base.2=/var/www/app/android/bibliaviva/platforms/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_0.dex
-path.2=classes_0.dex
-base.1=/var/www/app/android/bibliaviva/platforms/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
-path.1=classes.dex
-base.0=/var/www/app/android/bibliaviva/platforms/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-renamed.2=classes3.dex
+#Mon Aug 02 09:48:51 BRT 2021
+base.1=/var/www/bibliaviva/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes2.dex
+path.1=classes2.dex
+base.0=/var/www/bibliaviva/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex
