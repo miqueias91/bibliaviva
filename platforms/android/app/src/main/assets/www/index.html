@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="app" ng-csp>
+<html lang="pt-BR" ng-app="app" ng-csp>
 <head>
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,10 +15,13 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
     <script type="text/javascript" src="lib/SocialSharing/SocialSharing.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
     <title>Bíblia Sagrada Viva</title>
 </head>
 
@@ -181,7 +184,7 @@
           <ons-icon icon="fa-link"></ons-icon>
         </div>
       </ons-list-item>
-
+      
       <ons-list-item onclick="fn.loadLink('https://www.instagram.com/cristao.narede/')">
         <div class="left">
             <i class="fab fa-instagram"></i>
@@ -245,6 +248,7 @@
 </ons-modal>
 
 <template id="home.html">
+  <ons-page>
     <section style="margin: 16px" id="tela_login_google">
       <br><br>
       <p class="intro"  style="text-align: center;">Bem vindo, faça o login com a sua conta do <b>google</b> para uma melhor experiência no seu aplicativo.</p>
@@ -258,7 +262,6 @@
 
       <p class="intro">Apesar das ordens recebidas da Holanda, nem todos os exemplares recebidos em Batávia foram destruídos. Alguns deles foram corrigidos à mão e enviados às congregações da região (um desses volumes pode ser visto hoje no Museu Britânico, em Londres). O trabalho de revisão e correção do Novo Testamento foi iniciado e demorou dez longos anos para ser terminado. Somente após a morte de Almeida, em 1693, é que essa segunda versão foi impressa, na própria Batávia, onde também foi distribuída. A terceira edição viria a ser publicada em 1712.</p>
     </section>
-
     <section style="padding: 8px;display: none;" id="btn_remover_anuncio">
       <ons-button onclick="versaoPro()" modifier="large">ASSINAR VERSÃO PRO</ons-button>
     </section>
@@ -289,7 +292,7 @@
         var playerID = window.localStorage.getItem('playerID');
         var pushToken = window.localStorage.getItem('pushToken');
         var id_user = window.localStorage.getItem('id_user');
-        var app = 'viva_v2';
+        var app = 'abs';
         fn.loadLink('https://www.innovatesoft.com.br/auth?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
       };
       var versaoPro = function() {
@@ -297,7 +300,7 @@
         var playerID = window.localStorage.getItem('playerID');
         var pushToken = window.localStorage.getItem('pushToken');
         var id_user = window.localStorage.getItem('id_user');
-        var app = 'viva_v2';
+        var app = 'abs';
         fn.loadLink('https://www.innovatesoft.com.br/pricing?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
       };
     </script>
@@ -1765,8 +1768,8 @@
         <script>
           ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
-          }
+              admob.interstitial.show();
+            }
             var dados = this.data.title.split('||'); 
             this.querySelector('#conteudoLivro_ div.center').textContent = dados[1];
             $("#conteudoLivro").html('');
@@ -2144,8 +2147,8 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
-          }
+          admob.interstitial.show();
+        }
         app.registraAcesso('viva/notificacoes.html');
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
 

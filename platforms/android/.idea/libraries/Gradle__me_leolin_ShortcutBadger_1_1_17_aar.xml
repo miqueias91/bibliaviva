@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/032c35c25e9d637b6470f56b25bdb0c2/transformed/ShortcutBadger-1.1.17/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/032c35c25e9d637b6470f56b25bdb0c2/transformed/ShortcutBadger-1.1.17/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/032c35c25e9d637b6470f56b25bdb0c2/transformed/ShortcutBadger-1.1.17/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03880f661c06c7866d2547f9569a75f8/ShortcutBadger-1.1.17/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03880f661c06c7866d2547f9569a75f8/ShortcutBadger-1.1.17/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03880f661c06c7866d2547f9569a75f8/ShortcutBadger-1.1.17/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.leolin/ShortcutBadger/1.1.17/93a61db244b97f20c1bfbb191bb8ee965ff953be/ShortcutBadger-1.1.17-javadoc.jar!/" />

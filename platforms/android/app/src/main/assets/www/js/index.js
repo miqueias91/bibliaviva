@@ -223,7 +223,7 @@ var app = {
       return false;   
     }
     return false;
-  },  
+  }, 
     buscaFavorioHinario: function(hinario, id_hinario) {
     var array = JSON.parse(localStorage.getItem('lista-favorito-hinario'));
     if (array) {
@@ -287,7 +287,7 @@ var app = {
       }   
     }
     $("#listaFavoritos").html(html_favoritos);
-  },
+  }, 
   buscaTexto: function(versaoId,livro,capitulo, nome) {
     inicioLeitura = 0;
     localStorage.setItem("ultimo_livro_lido", nome);

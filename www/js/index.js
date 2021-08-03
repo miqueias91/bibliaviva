@@ -1611,3 +1611,4 @@ var app = {
 };
 
 app.initialize();
+app.buscaDadosUsuario();
