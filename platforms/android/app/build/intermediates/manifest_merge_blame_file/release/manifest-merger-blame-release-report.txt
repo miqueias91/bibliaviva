@@ -2,63 +2,63 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.innovatesoft.bibliaviva"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10006"
-6    android:versionName="1.0.6" >
+5    android:versionCode="10008"
+6    android:versionName="1.0.8" >
 7
 8    <uses-sdk
-8-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:5-47
+8-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:5-47
 9        android:minSdkVersion="19"
-9-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:5-47
+9-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:5-47
 10        android:targetSdkVersion="30" />
-10-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:15-44
+10-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:45:15-44
 11
 12    <supports-screens
-12-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+12-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
 13        android:anyDensity="true"
-13-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+13-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
 14        android:largeScreens="true"
-14-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+14-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
 15        android:normalScreens="true"
-15-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+15-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
 16        android:resizeable="true"
-16-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+16-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
 17        android:smallScreens="true"
-17-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+17-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
 18        android:xlargeScreens="true" />
-18-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+18-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
 19
 20    <uses-permission android:name="android.permission.INTERNET" />
-20-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
-20-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
+20-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
+20-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-21-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:46:5-79
-21-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:46:22-76
+21-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:46:5-79
+21-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:46:22-76
 22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-22-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:47:5-81
-22-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:47:22-78
+22-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:47:5-81
+22-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:47:22-78
 23    <uses-permission android:name="android.permission.BLUETOOTH" />
-23-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:48:5-68
-23-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:48:22-65
+23-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:48:5-68
+23-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:48:22-65
 24    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
-24-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:49:5-86
-24-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:49:22-83
+24-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:49:5-86
+24-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:49:22-83
 25
 26    <permission
-26-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:5-132
+26-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:5-132
 27        android:name="br.com.innovatesoft.bibliaviva.permission.RECEIVE_ADM_MESSAGE"
-27-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:17-93
+27-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:17-93
 28        android:protectionLevel="signature" />
-28-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:94-129
+28-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:50:94-129
 29
 30    <uses-permission android:name="br.com.innovatesoft.bibliaviva.permission.RECEIVE_ADM_MESSAGE" />
-30-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:51:5-101
-30-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:51:22-98
+30-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:51:5-101
+30-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:51:22-98
 31    <uses-permission android:name="android.permission.WAKE_LOCK" />
-31-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:52:5-68
-31-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:52:22-65
+31-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:52:5-68
+31-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:52:22-65
 32    <uses-permission android:name="android.permission.VIBRATE" />
-32-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:53:5-66
-32-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:53:22-63
+32-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:53:5-66
+32-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:53:22-63
 33    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
 34    <permission
 34-->[com.onesignal:OneSignal:3.10.5] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\30baf4a912c5fa785338ce2725f0e55e\OneSignal-3.10.5\AndroidManifest.xml:8:5-10:47
@@ -133,163 +133,163 @@
 63    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 64
 65    <application
-65-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:5-44:19
+65-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:5-44:19
 66        android:name="android.support.multidex.MultiDexApplication"
 67        android:hardwareAccelerated="true"
-67-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
+67-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
 68        android:icon="@mipmap/icon"
-68-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:53-80
+68-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:53-80
 69        android:label="@string/app_name"
-69-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:81-113
+69-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:81-113
 70        android:supportsRtl="true" >
-70-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
+70-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
 71        <activity
-71-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+71-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
 72            android:name="br.com.innovatesoft.bibliaviva.MainActivity"
-72-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:166-193
+72-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:166-193
 73            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-73-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:19-96
+73-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:19-96
 74            android:label="@string/activity_name"
-74-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:97-134
+74-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:97-134
 75            android:launchMode="singleTop"
-75-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:135-165
+75-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:135-165
 76            android:screenOrientation="portrait"
-76-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:194-230
+76-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:194-230
 77            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
-77-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:231-293
+77-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:231-293
 78            android:windowSoftInputMode="adjustResize" >
-78-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:294-336
+78-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:6:294-336
 79            <intent-filter android:label="@string/launcher_name" >
-79-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
-79-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
+79-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
+79-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
 80                <action android:name="android.intent.action.MAIN" />
-80-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
-80-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
+80-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
+80-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
 81
 82                <category android:name="android.intent.category.LAUNCHER" />
-82-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
-82-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+82-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
+82-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
 83            </intent-filter>
 84        </activity>
 85        <activity
-85-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:9-233
+85-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:9-233
 86            android:name="com.google.android.gms.ads.AdActivity"
-86-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:129-181
+86-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:129-181
 87            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-87-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:19-128
+87-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:19-128
 88            android:exported="false"
 88-->[com.google.android.gms:play-services-ads-lite:11.6.2] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\07a2ebf7abdd0b6162ce4101379df5de\play-services-ads-lite-11.6.2\AndroidManifest.xml:25:231-255
 89            android:theme="@android:style/Theme.Translucent" />
-89-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:182-230
+89-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:12:182-230
 90
 91        <meta-data
-91-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:9-134
+91-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:9-134
 92            android:name="com.google.android.gms.ads.APPLICATION_ID"
-92-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:20-76
+92-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:20-76
 93            android:value="ca-app-pub-7091486462236476~4799372634" />
-93-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:77-131
+93-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:13:77-131
 94
 95        <receiver
-95-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:9-18:20
+95-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:9-18:20
 96            android:name="nl.xservices.plugins.ShareChooserPendingIntent"
-96-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:42-103
+96-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:42-103
 97            android:enabled="true" >
-97-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:19-41
+97-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:14:19-41
 98            <intent-filter>
-98-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:15:13-17:29
+98-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:15:13-17:29
 99                <action android:name="android.intent.action.SEND" />
-99-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:16:17-69
-99-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:16:25-66
+99-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:16:17-69
+99-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:16:25-66
 100            </intent-filter>
 101        </receiver>
 102
 103        <provider
 104            android:name="nl.xservices.plugins.FileProvider"
-104-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:135-183
+104-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:135-183
 105            android:authorities="br.com.innovatesoft.bibliaviva.sharing.provider"
-105-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:19-74
+105-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:19-74
 106            android:exported="false"
-106-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:75-99
+106-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:75-99
 107            android:grantUriPermissions="true" >
-107-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:100-134
+107-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:19:100-134
 108            <meta-data
-108-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:13-115
+108-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:13-115
 109                android:name="android.support.FILE_PROVIDER_PATHS"
-109-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:24-74
+109-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:24-74
 110                android:resource="@xml/sharing_paths" />
-110-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:75-112
+110-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:20:75-112
 111        </provider>
 112
 113        <amazon:enable-feature
-113-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:9-159
+113-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:9-159
 114            xmlns:amazon="http://schemas.amazon.com/apk/res/android"
-114-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:100-156
+114-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:100-156
 115            android:name="com.amazon.device.messaging"
-115-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:32-74
+115-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:32-74
 116            android:required="false" />
-116-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:75-99
+116-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:22:75-99
 117
 118        <service
-118-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:9-92
+118-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:9-92
 119            android:name="com.onesignal.ADMMessageHandler"
-119-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:43-89
+119-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:43-89
 120            android:exported="false" />
-120-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:18-42
+120-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:23:18-42
 121
 122        <receiver
-122-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:9-30:20
+122-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:9-30:20
 123            android:name="com.onesignal.ADMMessageHandler$Receiver"
-123-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:19-74
+123-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:19-74
 124            android:permission="com.amazon.device.messaging.permission.SEND" >
-124-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:75-139
+124-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:24:75-139
 125            <intent-filter>
-125-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:25:13-29:29
+125-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:25:13-29:29
 126                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-126-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:26:17-90
-126-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:26:25-87
+126-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:26:17-90
+126-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:26:25-87
 127                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-127-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:27:17-85
-127-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:27:25-82
+127-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:27:17-85
+127-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:27:25-82
 128
 129                <category android:name="br.com.innovatesoft.bibliaviva" />
-129-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
-129-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
+129-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
+129-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
 130            </intent-filter>
 131        </receiver>
 132
 133        <activity
 134            android:name="com.adobe.phonegap.push.PushHandlerActivity"
-134-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:43-101
+134-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:43-101
 135            android:exported="true"
-135-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:19-42
+135-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:19-42
 136            android:permission="br.com.innovatesoft.bibliaviva.permission.PushHandlerActivity" />
-136-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:102-170
+136-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:31:102-170
 137
 138        <receiver android:name="com.adobe.phonegap.push.BackgroundActionButtonHandler" />
-138-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:32:9-90
-138-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:32:19-87
+138-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:32:9-90
+138-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:32:19-87
 139        <receiver android:name="com.adobe.phonegap.push.PushDismissedHandler" />
-139-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:33:9-81
-139-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:33:19-78
+139-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:33:9-81
+139-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:33:19-78
 140
 141        <service android:name="com.adobe.phonegap.push.FCMService" >
-141-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:34:9-38:19
-141-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:34:18-67
+141-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:34:9-38:19
+141-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:34:18-67
 142            <intent-filter>
-142-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:35:13-37:29
+142-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:35:13-37:29
 143                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-143-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:17-78
-143-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:25-75
+143-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:17-78
+143-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:25-75
 144            </intent-filter>
 145        </service>
 146        <service android:name="com.adobe.phonegap.push.PushInstanceIDListenerService" >
-146-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:39:9-43:19
-146-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:39:18-86
+146-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:39:9-43:19
+146-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:39:18-86
 147            <intent-filter>
-147-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:40:13-42:29
+147-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:40:13-42:29
 148                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-148-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:17-80
-148-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:25-77
+148-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:17-80
+148-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:25-77
 149            </intent-filter>
 150        </service>
 151
@@ -322,8 +322,8 @@
 165-->[com.onesignal:OneSignal:3.10.5] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\30baf4a912c5fa785338ce2725f0e55e\OneSignal-3.10.5\AndroidManifest.xml:64:25-78
 166
 167                <category android:name="br.com.innovatesoft.bibliaviva" />
-167-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
-167-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
+167-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
+167-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
 168            </intent-filter>
 169        </receiver>
 170        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
@@ -418,10 +418,10 @@
 217            android:exported="true" >
 217-->[com.google.firebase:firebase-messaging:11.6.2] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\89942aa027505c58e3ade23dd3bf94e1\firebase-messaging-11.6.2\AndroidManifest.xml:23:88-111
 218            <intent-filter android:priority="-500" >
-218-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:35:13-37:29
+218-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:35:13-37:29
 219                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-219-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:17-78
-219-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:25-75
+219-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:17-78
+219-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:36:25-75
 220            </intent-filter>
 221        </service>
 222
@@ -486,8 +486,8 @@
 253-->[com.onesignal:OneSignal:3.10.5] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\30baf4a912c5fa785338ce2725f0e55e\OneSignal-3.10.5\AndroidManifest.xml:64:25-78
 254
 255                <category android:name="br.com.innovatesoft.bibliaviva" />
-255-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
-255-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
+255-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:17-75
+255-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:28:27-72
 256            </intent-filter>
 257        </receiver>
 258        <!--
@@ -501,10 +501,10 @@
 264            android:exported="true" >
 264-->[com.google.firebase:firebase-iid:11.6.2] C:\Users\Innovate Solft\.gradle\caches\transforms-2\files-2.1\044306941b764b5947c5df282d93da6e\firebase-iid-11.6.2\AndroidManifest.xml:40:83-106
 265            <intent-filter android:priority="-500" >
-265-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:40:13-42:29
+265-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:40:13-42:29
 266                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-266-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:17-80
-266-->C:\xampp\htdocs\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:25-77
+266-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:17-80
+266-->C:\xampp\htdocs\biblia\bibliaviva\platforms\android\app\src\main\AndroidManifest.xml:41:25-77
 267            </intent-filter>
 268        </service>
 269

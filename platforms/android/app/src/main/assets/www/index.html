@@ -184,6 +184,18 @@
           <ons-icon icon="fa-link"></ons-icon>
         </div>
       </ons-list-item>
+
+      <ons-list-item onclick="fn.loadLink('https://www.cristaonarede.com.br/loja.php')">
+        <div class="left">
+            <i class="fas fa-store"></i>
+        </div>
+        <div class="center">
+          Loja
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
       
       <ons-list-item onclick="fn.loadLink('https://www.instagram.com/cristao.narede/')">
         <div class="left">
@@ -224,13 +236,13 @@
         margin: 0 auto;
       }
 
-        .profile-pic > img {
-            width: 80px;
-            height: 80px;
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
-        }
+      .profile-pic > img {
+        width: 50px;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+      }
 
       ons-list-item {
         color: #444;
@@ -629,8 +641,9 @@
       .profile-pic {
         background-color: transparent;
       }
-      .profile-pic > img {
+     .profile-pic > img {
         width: 50px!important;
+        height: auto!important;
         background-color: transparent;
         margin: 0 auto;
         padding: 0!important;
