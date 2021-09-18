@@ -54,6 +54,10 @@ if (!window.localStorage.getItem('lista-favorito-hinario')) {
   localStorage.setItem("lista-favorito-hinario", '[]'); 
 }
 
+if (!window.localStorage.getItem('lista-orientacao-consolo')) {
+  localStorage.setItem("lista-orientacao-consolo", '[]'); 
+}
+
 window.fn.toggleMenu = function () {
   document.getElementById('appSplitter').left.toggle();
 };
@@ -1189,6 +1193,7 @@ var app = {
         error: function(e) {
           app.admob();
           //app.init();
+          app.buscaPalavraOrientacaoTopico();
           app.buscaNotificacoes();
         },
         success: function(a) {
@@ -1212,6 +1217,7 @@ var app = {
           }
           app.admob();
           //app.init();
+          app.buscaPalavraOrientacaoTopico();
           app.buscaNotificacoes();
         },
       });
@@ -1618,7 +1624,57 @@ var app = {
         },
       });
     }
-  }
+  },
+  buscaPalavraOrientacaoTopico: function() {
+    var playerID = '';
+    playerID = window.localStorage.getItem('playerID');
+    $.ajax({
+      url: "https://www.innovatesoft.com.br/webservice/app/palavraOrientacaoConsoloTopico.php",
+      dataType: 'json',
+      type: 'GET',
+      data: {
+        'userId': playerID
+      },
+      error: function(e) {
+        console.log(e)
+      },
+      success: function(a) {
+        if (a) {
+          localStorage.setItem("lista-orientacao-consolo", JSON.stringify(a));
+        }
+      },
+    });
+  },
+  buscaPalavraOrientacaoVersiculos: function(id_orientacaoconsolotopico) {
+    var array = JSON.parse(localStorage.getItem('lista-orientacao-consolo'));
+    var html_orientacao_consolo = '';
+    var link = 'palavraOrientacaoConsoloVersiculos.html';
+    var descricao = '';
+    if (array) {
+      for(var k=0; k < array.length; k++) {
+        if (array[k]['id_orientacaoconsolotopico'] ==  id_orientacaoconsolotopico) {
+          if (array[k]['versiculos']) {
+            var versiculos = array[k]['versiculos'][0];
+            for (var i = 0; i < versiculos.length; i++) {              
+              descricao = versiculos[i]['abbrev']+'||'+versiculos[i]['capitulo']+'.1';
+              var abbrev = versiculos[i]['abbrev'];
+              var name = versiculos[i]['name'];
+              var chapters = '0';
+              var capitulo = versiculos[i]['capitulo'];
+              html_orientacao_consolo += '<ons-list-item onclick="fn.pushPage({\'id\': \'textoLivro.html\', \'title\': \''+abbrev+'||'+name+'||'+chapters+'||'+capitulo+'\'});">'+
+                  '<div class="center list-item__center list-item--material__center" style="font-size: 15px;">'+versiculos[i]['name']+' '+versiculos[i]['capitulo']+':'+versiculos[i]['versiculo']+'</div>'+
+                  '<div class="left list-item__left list-item--material__left"></div>'+
+                  '<div class="right list-item__right list-item--material__right">'+
+                     '<ons-icon icon="fa-angle-right" class="ons-icon fa-angle-right fa" modifier="material"></ons-icon>'+
+                  '</div>'+
+               '</ons-list-item>';
+            }
+            $("#lista_orientacao_consolo_versiculos").html(html_orientacao_consolo);
+          }
+        }
+      }   
+    }
+  },
 };
 
 app.initialize();

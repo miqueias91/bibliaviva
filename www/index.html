@@ -48,7 +48,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.7" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.9" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -107,6 +107,18 @@
         </div>
         <div class="center">
           Palavra do dia
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+
+      <ons-list-item onclick="fn.pushPage({'id': 'palavraOrientacaoConsolo.html', 'title': 'Orientação e Consolo'})">
+        <div class="left">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <div class="center">
+          Orientação e Consolo
         </div>
         <div class="right">
           <ons-icon icon="fa-link"></ons-icon>
@@ -175,7 +187,7 @@
 
       <ons-list-item onclick="fn.pushPage({'id': 'faleConosco.html', 'title': 'Fale Conosco'})">
         <div class="left">
-          <i class="fas fa-comment"></i>
+          <i class="fas fa-headset"></i>
         </div>
         <div class="center">
           Fale Conosco
@@ -196,7 +208,7 @@
           <ons-icon icon="fa-external-link"></ons-icon>
         </div>
       </ons-list-item>
-      
+
       <ons-list-item onclick="fn.loadLink('https://www.instagram.com/cristao.narede/')">
         <div class="left">
             <i class="fab fa-instagram"></i>
@@ -3236,6 +3248,119 @@
       ons-card {
         cursor: pointer;
         color: #549A7D;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="palavraOrientacaoConsolo.html">
+  <ons-page>
+    <ons-toolbar id="orientacaoConsolo_">
+        <div class="left">
+            <ons-back-button>Orientação e Consolo</ons-back-button>
+        </div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </ons-toolbar>
+
+    <ons-list id="lista_orientacao_consolo"><p style="text-align:center;"><br><br>Nenhum tópico encontrado, tente mais tarde.<br><br></p></ons-list>
+    <script>
+        ons.getScriptPage().onInit = function () {
+          if (window.localStorage.getItem("versao_pro") === 'NAO') {
+            //admob.interstitial.show();
+          }
+          app.registraAcesso('viva/palavraOrientacaoConsolo.html');
+          this.querySelector('#orientacaoConsolo_ div.center').textContent = 'Orientação e Consolo';
+
+          var palavraOrientacaoConsolo = JSON.parse(localStorage.getItem('lista-orientacao-consolo'));
+          if (palavraOrientacaoConsolo.length > 0) {   
+            var html_orientacao_consolo = '';
+            var link = 'palavraOrientacaoConsoloVersiculos.html';
+            var descricao = '';
+            for (var i = 0; i < palavraOrientacaoConsolo.length; i++) {
+              descricao = palavraOrientacaoConsolo[i]['id_orientacaoconsolotopico']+'||'+palavraOrientacaoConsolo[i]['topico'];
+              html_orientacao_consolo += '<ons-list-item class="showAd list-item list-item--material" onclick="fn.pushPage({\'id\': \''+link+'\', \'title\': \''+descricao+'\'})" modifier="material">'+
+                  '<div class="center list-item__center list-item--material__center" style="font-size: 15px;">'+palavraOrientacaoConsolo[i]['topico']+'</div>'+
+                  '<div class="left list-item__left list-item--material__left"></div>'+
+                  '<div class="right list-item__right list-item--material__right">'+
+                     '<ons-icon icon="fa-angle-right" class="ons-icon fa-angle-right fa" modifier="material"></ons-icon>'+
+                  '</div>'+
+               '</ons-list-item>';
+            }
+            $("#lista_orientacao_consolo").html(html_orientacao_consolo);
+          }
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="palavraOrientacaoConsoloVersiculos.html">
+  <ons-page>
+    <ons-toolbar id="orientacaoConsoloVersiculos_">
+        <div class="left">
+            <ons-back-button>Orientação e Consolo</ons-back-button>
+        </div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </ons-toolbar>
+
+    <ons-list id="lista_orientacao_consolo_versiculos"><p style="text-align:center;"><br><br>Nenhum versículo encontrado.<br><br></p></ons-list>
+
+    <script>
+        ons.getScriptPage().onInit = function () {
+          if (window.localStorage.getItem("versao_pro") === 'NAO') {
+            //admob.interstitial.show();
+          }
+          app.registraAcesso('viva/palavraOrientacaoConsoloVersiculos.html');
+          fn.showDialog('modal-aguarde');
+          var dados = this.data.title.split('||'); 
+          app.buscaPalavraOrientacaoVersiculos(dados[0]);
+          var timeoutID = 0;
+          clearTimeout(timeoutID);
+          timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 5);
+          this.querySelector('#orientacaoConsoloVersiculos_ div.center').textContent = dados[1];
+        }
+    </script>
+    <style>
+        .button-margin {
+            margin: 6px 0;
+        }
+
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
       }
 
       .card__title,
